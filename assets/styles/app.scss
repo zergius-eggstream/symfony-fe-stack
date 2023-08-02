@@ -27,6 +27,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        gap: 20px;
         animation: .5s linear 0s infinite alternate floating;
     }
 }

@@ -29,3 +29,11 @@ Install additional dependencies like autoprefixer PostCSS:
 
 Create working project endpoint and add js/css using Encore. Modify `webpack.config.js` if needed.
 
+## Install Symfony Stimulus and its dependencies
+
+Install Stimulus Bundle
+
+    composer require symfony/stimulus-bundle
+    yarn install --force
+
+Add example usage of Stimulus
