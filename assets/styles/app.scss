@@ -1,0 +1,41 @@
+::placeholder {
+    color: gray;
+}
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 80%;
+    font: 18px/1.5 sans-serif;
+
+    .lipsum {
+        background: #9aafc8;
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .lipsum:hover {
+        transform: scale(1.2) translate(10px, 10px);
+    }
+    .lipsum-1 {
+        background: #e4eaf3;
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        animation: .5s linear 0s infinite alternate floating;
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
