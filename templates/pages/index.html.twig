@@ -28,5 +28,16 @@
 <div {{ stimulus_controller('hello') }}>
     ...
 </div>
+<div {{ stimulus_controller('clicker', { 'startCount': 99 }) }}>
+    <button
+        {{ stimulus_action('clicker', 'increment', 'click') }}
+        {{ stimulus_target('clicker', 'clickBtn') }}
+    >
+        Click
+    </button>
+    I have been clicked
+    <span {{ stimulus_target('clicker', 'count') }}>0</span>
+    times!
+</div>
 
 {% endblock %}

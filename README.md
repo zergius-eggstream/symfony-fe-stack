@@ -22,7 +22,7 @@ Install additional dependencies like autoprefixer PostCSS:
 1. Add `.enablePostCssLoader()` to `webpack.config.js`
 2. Install node packages, like `yarn add postcss postcss-loader autoprefixer --dev`
 3. Create `postcss.config.js` file
-4. Add browserlist section to `package.json` file
+4. Add browserslist section to `package.json` file
 5. **Do not forget to delete `node_modules/.cache/babel-loader/` folder if you change browserslist**
 
 ## Test if Symfony Encore works correctly
