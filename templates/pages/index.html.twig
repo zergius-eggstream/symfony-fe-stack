@@ -25,19 +25,39 @@
     </div>
 </div>
 
-<div {{ stimulus_controller('hello') }}>
-    ...
-</div>
-<div {{ stimulus_controller('clicker', { 'startCount': 99 }) }}>
-    <button
-        {{ stimulus_action('clicker', 'increment', 'click') }}
-        {{ stimulus_target('clicker', 'clickBtn') }}
-    >
-        Click
-    </button>
-    I have been clicked
-    <span {{ stimulus_target('clicker', 'count') }}>0</span>
-    times!
+<div class="container">
+
+    <div class="row">
+        <div class="col g-3">
+            <div {{ stimulus_controller('hello') }}>
+                ...
+            </div>
+        </div>
+        <div class="col g-3">
+            <div {{ stimulus_controller('clicker', { 'startCount': 99 }) }}>
+                <button class="btn btn-info"
+                    {{ stimulus_action('clicker', 'increment', 'click') }}
+                    {{ stimulus_target('clicker', 'clickBtn') }}
+                >
+                    Click
+                </button>
+                I have been clicked
+                <span {{ stimulus_target('clicker', 'count') }}>0</span>
+                times!
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col g-3">
+            <span class="fa fa-heart red"></span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt blandit elit, quis congue dolor lacinia quis. Cras congue sodales enim vel finibus.
+        </div>
+        <div class="col g-3">
+            <span class="fa fa-comment red"></span>
+            Morbi viverra enim tellus. Praesent pharetra mi id faucibus faucibus. Sed finibus est ut odio sollicitudin, sed lobortis erat dapibus. Etiam eu sapien augue.
+        </div>
+    </div>
 </div>
 
 {% endblock %}

@@ -25,6 +25,15 @@ Install additional dependencies like autoprefixer PostCSS:
 4. Add browserslist section to `package.json` file
 5. **Do not forget to delete `node_modules/.cache/babel-loader/` folder if you change browserslist**
 
+Install 3rd party libraries, like
+
+    yarn add bootstrap @popperjs/core font-awesome --dev
+
+and import them in css file
+
+    @import '~bootstrap';
+    @import '~font-awesome';
+
 ## Test if Symfony Encore works correctly
 
 Create working project endpoint and add js/css using Encore. Modify `webpack.config.js` if needed.
