@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page 1{% endblock %}
+
+{% block body %}
+
+
+
+<div class="container">
+
+    <h1>Page 1</h1>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/page1">Page 1</a></li>
+        <li><a href="/page2">Page 2</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col g-3">
+            <div {{ stimulus_controller('hello') }}>
+                ...
+            </div>
+        </div>
+        <div class="col g-3">
+            <div {{ stimulus_controller('clicker', { 'startCount': 55 }) }}>
+                <button class="btn btn-info"
+                    {{ stimulus_action('clicker', 'increment', 'click') }}
+                    {{ stimulus_target('clicker', 'clickBtn') }}
+                >
+                    Click
+                </button>
+                I have been clicked
+                <span {{ stimulus_target('clicker', 'count') }}>0</span>
+                times!
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

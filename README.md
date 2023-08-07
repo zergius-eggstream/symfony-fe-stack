@@ -46,3 +46,12 @@ Install Stimulus Bundle
     yarn install --force
 
 Add example usage of Stimulus
+
+## Install Symfony UX Turbo
+
+Install UX Turbo package
+
+    composer require symfony/ux-turbo
+    yarn install --force
+
+Create some pages and make example usage of UX Turbo
