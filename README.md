@@ -55,3 +55,18 @@ Install UX Turbo package
     yarn install --force
 
 Create some pages and make example usage of UX Turbo
+
+# This project usage
+## Dev Install
+
+    docker-compose -p sfes up -d
+    php bin/console doctrine:database:create --if-not-exists
+    php bin/console doctrine:migrations:migrate -n
+    php bin/console doctrine:fixtures:load
+    yarn install
+
+## Dev Usage
+
+    docker-compose -p sfes up -d
+    symfony server:start
+    yarn watch

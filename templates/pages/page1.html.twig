@@ -1,22 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends '_page.html.twig' %}
 
 {% block title %}Page 1{% endblock %}
 
-{% block body %}
-
-
+{% block content %}
 
 <div class="container">
 
     <h1>Page 1</h1>
 
     <img src="{{ asset('build/images/flower.svg') }}" alt="Flower" width="322" height="361" >
-
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/page1">Page 1</a></li>
-        <li><a href="/page2">Page 2</a></li>
-    </ul>
 
     <div class="row">
         <div class="col g-3">

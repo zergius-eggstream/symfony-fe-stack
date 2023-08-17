@@ -1,0 +1,31 @@
+<turbo-frame id="client-list">
+    <h2>Clients ({{ clients|length }})</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" colspan="2" class="text-start">id</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in clients %}
+            {# {{ dump(client) }} #}
+            <tr data-created="{{ client.createdAt|date('Y-m-d') }}">
+                <th scope="row" class="text-start">{{ client.id }}</th>
+                <td><img src="{{ client.avatar }}" alt=""></td>
+                <td>{{ client.firstName }}</td>
+                <td>{{ client.lastName }}</td>
+                <td>{{ client.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% if previous >= 0 %}
+    <a class="btn btn-lg btn-outline-dark" href="{{ path('_fragment_client_list', { offset: previous, count: count }) }}">Previous</a>
+{% endif %}
+{% if next < clients|length %}
+    <a class="btn btn-lg btn-outline-dark" href="{{ path('_fragment_client_list', { offset: next, count: count }) }}">Next</a>
+{% endif %}
+</turbo-frame>
